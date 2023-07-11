@@ -32,6 +32,8 @@ jobs:
         python github_backup.py
     - name: Commit changes
       run: |
+          git config user.name "Arthur Panazolo"
+          git config user.email "arthur.panazolo@acad.pucrs.br"
           git add .
           git commit -m "Updated Backup"
           git push
