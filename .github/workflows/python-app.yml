@@ -28,9 +28,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
     - name: Run Backup
-      run: | 
-        echo "{ACCOUNT_USERNAME}={secrets.ACCOUNT_USERNAME}" >> "$GITHUB_ENV"
-        echo "{ACCOUNT_TOKEN}={secrets.ACCOUNT_TOKEN}" >> "$GITHUB_ENV"
+      env:
+          ACCOUNT_USERNAME: ${{ secrets.ACCOUNT_USERNAME }}
+          ACCOUNT_TOKEN: ${{ secrets.ACCOUNT_TOKEN }}
+      run: 
         python github_backup.py
 
         
