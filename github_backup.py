@@ -5,7 +5,7 @@ import subprocess
 
 GITHUB_USERNAME = os.environ['ACCOUNT_USERNAME']
 GITHUB_TOKEN = os.environ['ACCOUNT_TOKEN']
-BACKUP_DIRECTORY = './backup'
+BACKUP_DIRECTORY = '../backup'
 
 
 
