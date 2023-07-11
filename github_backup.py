@@ -3,8 +3,8 @@ import os
 import subprocess
 
 
-GITHUB_USERNAME = os.environ['ACCOUNT_USERNAME']
-GITHUB_TOKEN = os.environ['ACCOUNT_TOKEN']
+ACCOUNT_USERNAME = os.environ['ACCOUNT_USERNAME']
+ACCOUNT_TOKEN = os.environ['ACCOUNT_TOKEN']
 BACKUP_DIRECTORY = 'backup-folder'
 
 
@@ -26,8 +26,8 @@ def backup_repository(repo):
 
 
 
-url = f'https://api.github.com/users/{GITHUB_USERNAME}/repos'
-headers = {'Authorization': f'token {GITHUB_TOKEN}'}
+url = f'https://api.github.com/users/{ACCOUNT_USERNAME}/repos'
+headers = {'Authorization': f'token {ACCOUNT_TOKEN}'}
 
 response = requests.get(url, headers=headers)
 repositories = response.json()
