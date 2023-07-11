@@ -5,8 +5,7 @@ import subprocess
 
 GITHUB_USERNAME = os.environ['ACCOUNT_USERNAME']
 GITHUB_TOKEN = os.environ['ACCOUNT_TOKEN']
-BACKUP_DIRECTORY = '../backup-folder'
-
+BACKUP_DIRECTORY = 'backup-folder'
 
 
 if not os.path.exists(BACKUP_DIRECTORY):
