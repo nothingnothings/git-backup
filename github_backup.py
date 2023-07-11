@@ -16,6 +16,7 @@ if not os.path.exists(BACKUP_DIRECTORY):
 def backup_repository(repo):
     repo_name = repo['name']
     repo_url = repo['clone_url']
+    print(repo_url, "REPO URL")
     repo_dir = os.path.join(BACKUP_DIRECTORY, repo_name)
 
     print(f'Backing up repository: {repo_name}')
