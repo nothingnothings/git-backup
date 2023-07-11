@@ -30,10 +30,10 @@ jobs:
           ACCOUNT_TOKEN: ${{ secrets.ACCOUNT_TOKEN }}
       run: 
         python github_backup.py
-    - uses: stefanzweifel/git-auto-commit-action@v4
-    - name: Save Changes (commit)
-      with:
-        commit_message: Updated Backups
+#     - uses: stefanzweifel/git-auto-commit-action@v4
+#     - name: Save Changes (commit)
+#       with:
+#         commit_message: Updated Backups
 
         
         
