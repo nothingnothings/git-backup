@@ -32,7 +32,7 @@ jobs:
       run: | 
         echo "{ACCOUNT_USERNAME}={secrets.ACCOUNT_USERNAME}" >> "$GITHUB_ENV"
         echo "{ACCOUNT_TOKEN}={secrets.ACCOUNT_TOKEN}" >> "$GITHUB_ENV"
-        py github_backup.py
+        python github_backup.py
 
         
         
