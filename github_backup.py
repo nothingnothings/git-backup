@@ -2,11 +2,9 @@ import requests
 import os
 import subprocess
 
-env_file = os.getenv('GITHUB_ENV')
 
-
-GITHUB_USERNAME = os.environ['GITHUB_USERNAME']
-GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
+GITHUB_USERNAME = os.environ['ACCOUNT_USERNAME']
+GITHUB_TOKEN = os.environ['ACCOUNT_TOKEN']
 BACKUP_DIRECTORY = './backup'
 
 
