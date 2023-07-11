@@ -19,8 +19,8 @@ def backup_repository(repo):
     repo_dir = os.path.join(BACKUP_DIRECTORY, repo_name)
 
     print(f'Backing up repository: {repo_name}')
-
-    subprocess.call(['git', 'clone', '--mirror', repo_url, repo_dir])
+    if repo['name'] != '***':
+        subprocess.call(['git', 'clone', '--mirror', repo_url, repo_dir])
 
 
 
