@@ -21,7 +21,7 @@ def backup_repository(repo):
 
     print(f'Backing up repository: {repo_name}')
 
-    subprocess.call(['git', 'clone', '--mirror', repo_url, repo_dir])
+    subprocess.call(['git', 'clone', '--mirror', repo_url, '.'])
 
 
 
@@ -34,5 +34,5 @@ repositories = response.json()
 
 
 for repo in repositories:
-    if repo['name'] != 'github_backup':
+    if repo['name'] != 'github_backup' and repo['name'] != 'DefinitelyTyped':
         backup_repository(repo)
