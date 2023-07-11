@@ -3,7 +3,7 @@ import os
 import subprocess
 
 
-ACCOUNT_USERNAME = os.environ['ACCOUNT_USERNAME']
+ACCOUNT_USERNAME = "nothingnothings"
 ACCOUNT_TOKEN = os.environ['ACCOUNT_TOKEN']
 BACKUP_DIRECTORY = 'backup-folder'
 
