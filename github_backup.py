@@ -21,7 +21,7 @@ def backup_repository(repo):
 
     print(f'Backing up repository: {repo_name}')
 
-    subprocess.call(['git', 'clone', '--mirror', repo_url, 'repo_dir'])
+    subprocess.call(['git', 'clone', '--mirror', repo_url, repo_dir])
 
 
 
