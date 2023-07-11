@@ -35,5 +35,3 @@ repositories = response.json()
 
 for repo in repositories:
     backup_repository(repo)
-
-    
