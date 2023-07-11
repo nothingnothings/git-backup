@@ -33,8 +33,8 @@ jobs:
           ACCOUNT_USERNAME: ${{ secrets.ACCOUNT_USERNAME }}
           ACCOUNT_TOKEN: ${{ secrets.ACCOUNT_TOKEN }}
       run: 
-        mkdir backup
-        touch backup/.gitkeep
+        mkdir backup;
+        touch backup/.gitkeep;
         python github_backup.py
 
         
