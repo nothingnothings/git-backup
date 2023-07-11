@@ -7,8 +7,6 @@ ACCOUNT_USERNAME = os.environ['ACCOUNT_USERNAME']
 ACCOUNT_TOKEN = os.environ['ACCOUNT_TOKEN']
 BACKUP_DIRECTORY = 'backup-folder'
 
-print(ACCOUNT_USERNAME, ACCOUNT_TOKEN)
-
 
 if not os.path.exists(BACKUP_DIRECTORY):
     os.makedirs(BACKUP_DIRECTORY)
@@ -18,12 +16,10 @@ if not os.path.exists(BACKUP_DIRECTORY):
 def backup_repository(repo):
     repo_name = repo['name']
     repo_url = repo['clone_url']
-    print(repo_url, "REPO URL")
     repo_dir = os.path.join(BACKUP_DIRECTORY, repo_name)
 
     print(f'Backing up repository: {repo_name}')
-    if repo['name'] != '***':
-        subprocess.call(['git', 'clone', '--mirror', repo_url, repo_dir])
+    subprocess.call(['git', 'clone', '--mirror', repo_url, repo_dir])
 
 
 
@@ -37,5 +33,5 @@ repositories = response.json()
 
 for repo in repositories:
     print(repo['name'])
-    if repo['name'] != 'github_backup' and repo['name'] != 'DefinitelyTyped' and repo['name'] != '***':
+    if repo['name'] != 'git-backup' and repo['name'] != 'DefinitelyTyped':
         backup_repository(repo)
