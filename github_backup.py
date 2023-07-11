@@ -33,5 +33,6 @@ repositories = response.json()
 
 
 for repo in repositories:
+    print(repo['name'])
     if repo['name'] != 'github_backup' and repo['name'] != 'DefinitelyTyped' and repo['name'] != '***':
         backup_repository(repo)
