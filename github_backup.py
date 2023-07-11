@@ -7,6 +7,8 @@ ACCOUNT_USERNAME = os.environ['ACCOUNT_USERNAME']
 ACCOUNT_TOKEN = os.environ['ACCOUNT_TOKEN']
 BACKUP_DIRECTORY = 'backup-folder'
 
+print(ACCOUNT_USERNAME, ACCOUNT_TOKEN)
+
 
 if not os.path.exists(BACKUP_DIRECTORY):
     os.makedirs(BACKUP_DIRECTORY)
