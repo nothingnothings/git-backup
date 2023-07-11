@@ -11,7 +11,6 @@ on:
 
 permissions:
   contents: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -31,8 +30,8 @@ jobs:
           ACCOUNT_TOKEN: ${{ secrets.ACCOUNT_TOKEN }}
       run: 
         python github_backup.py
-    - name: Save Changes (commit)
     - uses: stefanzweifel/git-auto-commit-action@v4
+    - name: Save Changes (commit)
       with:
         commit_message: Updated Backups
 
