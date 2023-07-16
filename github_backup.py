@@ -13,7 +13,14 @@ if not os.path.exists(BACKUP_DIRECTORY):
 
 
 
+def remove_folders():
+    for folder in os.listdir(BACKUP_DIRECTORY):
+        folder_path = os.path.join(BACKUP_DIRECTORY, folder)
+        if os.path.isdir(folder_path):
+            subprocess.call(['rm', '-rf', folder_path])
+
 def backup_repository(repo):
+    remove_folders()
     repo_name = repo['name']
     repo_url = repo['clone_url']
     repo_dir = os.path.join(BACKUP_DIRECTORY, repo_name)
@@ -21,7 +28,6 @@ def backup_repository(repo):
     print(f'Backing up repository: {repo_name}')
     if (repo_url != f'https://github.com/{ACCOUNT_USERNAME}/git-backup/'):
             subprocess.call(['git', 'clone', '--mirror', repo_url, repo_dir])
-
 
 
 
