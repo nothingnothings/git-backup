@@ -2,11 +2,12 @@
 name: GitHub Repository Backup
 
 on:
-  push:
-    branches:
-      - master
-#   schedule:
-#     - cron: 0 */24 * * *
+# ALTERNATIVE WORKFLOW RUN
+#   push: 
+#     branches:
+#       - master
+  schedule:
+    - cron: 0 */24 * * *
 
 permissions:
   contents: write
